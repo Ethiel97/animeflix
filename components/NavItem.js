@@ -1,9 +1,13 @@
 import Link from 'next/link'
 import React from 'react'
+import { useRouter } from "next/router";
 
 const NavItem = ({ title, link, Icon }) => {
+    const router = useRouter();
     return (
-        <Link href={link}>
+        <Link
+            className={router.pathname == link ? "text-red-500" : ""}
+            href={link}>
             <div className='flex flex-col mx-5 text-xl 
             h-auto transition-all duration-150 
             group overflow-hidden active:text-red-500'>

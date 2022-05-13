@@ -23,7 +23,7 @@ const AnimeThumbnail = ({ anime }) => {
                 <div className='absolute w-full top-0 left-0 right-0 bottom-0 bg-black/40 rounded-md'>
 
 
-                    <div class='flex justify-between mt-3 ml-3 mr-3'>
+                    <div className='flex justify-between mt-3 ml-3 mr-3'>
                         {/* anime year */}
                         <div className='text-black text-sm text-center
                      font-bold p-2  rounded-sm bg-slate-200/60 w-14'>{anime.year || '-'}</div>

@@ -1,5 +1,4 @@
-import Head from 'next/head'
-import Image from 'next/image'
+
 import AnimeByGenresList from '../components/AnimeByGenreList';
 import Banner from '../components/Banner';
 

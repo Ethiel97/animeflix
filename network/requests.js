@@ -55,7 +55,7 @@ async function searchCharacters(searchTerm) {
   return res;
 }
 
-async function getTopAnime() {
+async function getTopAnimes() {
   let req = await fetch(`${API_BASE_URL}/top/anime`);
 
   let res = await req.json();
@@ -93,7 +93,7 @@ export {
   getSingleCharacter,
   searchAnimes,
   searchCharacters,
-  getTopAnime,
+  getTopAnimes,
   getAnimeRecommendations,
   getAnimeReviews
 };

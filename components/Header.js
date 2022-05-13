@@ -18,19 +18,19 @@ const items = [
     {
         'title': 'Top',
         'link': '/top',
-        'icon': HeartIcon,
+        'icon': ThumbUpIcon,
     },
-    {
+    /* {
         'title': 'Recoms',
         'link': '/recommendations',
         'icon': ThumbUpIcon,
-    }
+    } */
 ];
 export default function Header() {
     return (
-        <div className='flex m-8 justify-between items-center cursor-pointer h-auto'>
+        <div className='flex flex-col sm:flex-row m-8 justify-center 
+         sm:justify-between items-center cursor-pointer h-auto'>
             <div className='flex justify-between'>
-
                 <Logo />
 
                 <ul className='flex justify-between space-x-4 sm:ml-14'>
@@ -38,7 +38,6 @@ export default function Header() {
                         <NavItem key={title} link={link} Icon={icon} title={title} />)}
                 </ul>
             </div>
-
 
             <Searchbar />
         </div>
