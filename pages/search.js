@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import AnimeList from '../components/AnimeList'
 import { searchAnimes } from '../network/requests'
 import { useRouter } from 'next/router'
