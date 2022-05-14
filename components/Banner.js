@@ -50,6 +50,7 @@ const Banner = ({ anime }) => {
                 layout='responsive'
                 // placeholder='blur'
                 // blurDataURL='{bannerImage}'
+                alt={anime.title}
                 src={bannerImage}
                 height={300}
                 width={1080} />
