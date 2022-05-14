@@ -16,6 +16,8 @@ const AnimeThumbnail = ({ anime }) => {
                     className='object-cover rounded-md'
                     layout='responsive'
                     src={anime.images.jpg.large_image_url}
+                alt={anime.title}
+
                     height={1020}
                     width={1080} />
 
