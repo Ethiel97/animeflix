@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import React from 'react'
 import { useRouter } from "next/router";
 
 const NavItem = ({ title, link, Icon }) => {
