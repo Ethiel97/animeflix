@@ -3,7 +3,7 @@ import AnimeList from '../components/AnimeList'
 import { searchAnimes } from '../network/requests'
 import { useRouter } from 'next/router'
 
-const search = () => {
+const Search = () => {
 
     let router = useRouter();
     const [loading, setLoading] = useState(true);
@@ -33,6 +33,6 @@ const search = () => {
     )
 }
 
-export default search
+export default Search
 
 /*  */
