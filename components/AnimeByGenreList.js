@@ -28,8 +28,9 @@ const AnimeByGenresList = ({ data }) => {
                             gap={14}
                             loop
                             mobileBreakpoint={464} >
-                            {animes.map(anime => (
+                            {animes.map((anime,index) => (
                                 <Carousel.Item
+                                    key={anime.mal_id+index}
                                     className='rounded-md overflow-visible'
                                     swipeable={true}
                                     draggable={true}
