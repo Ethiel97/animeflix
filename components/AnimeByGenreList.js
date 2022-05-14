@@ -1,7 +1,6 @@
-import React from 'react'
 import AnimeThumbnail from './AnimeThumbnail'
-
 import Carousel from 'react-grid-carousel'
+
 const responsive = [
     { breakpoint: 2000, cols: 6 },
     { breakpoint: 1200, cols: 5 },
