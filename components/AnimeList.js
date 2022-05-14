@@ -1,4 +1,3 @@
-import React from 'react'
 import AnimeThumbnail from './AnimeThumbnail'
 import Carousel from 'react-grid-carousel'
 import ContentShimmer from 'react-content-shimmer'
