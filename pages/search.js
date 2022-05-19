@@ -9,7 +9,6 @@ const Search = () => {
     const [loading, setLoading] = useState(true);
     const [animes, setAnimes] = useState([]);
 
-
     //search animes by query from the url in useEffect hook
     useEffect(() => {
         const query = router.query.query;

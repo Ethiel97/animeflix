@@ -1,7 +1,8 @@
 import AnimeThumbnail from './AnimeThumbnail'
 import Carousel from 'react-grid-carousel'
 import ContentShimmer from 'react-content-shimmer'
-
+import Image from 'next/image'
+import noAnime from '../assets/images/no-data.svg'
 
 const responsive = [
     { breakpoint: 2000, cols: 6, rows: 3 },
@@ -32,7 +33,7 @@ const AnimeList = ({ animes, loading }) => {
                                 showDots={true}
                                 ssr={true} // means to render carousel on server-side.
                                 infinite={true}
-                                key={index}
+                                key={index * 2}
                                 responsive={responsive}>
                                 <ContentShimmer key={index + index}
                                     size={{ height: 313, width: 332 }}
@@ -49,7 +50,7 @@ const AnimeList = ({ animes, loading }) => {
     const renderAnimes = () => {
         {
             //render animes if animes list is not empty otherwise render text for empty list
-            return animes.length > 0 ? (
+            return animes && animes.length > 0 ? (
                 <Carousel
                     className='overflow-visible'
                     cols={4}
@@ -63,7 +64,7 @@ const AnimeList = ({ animes, loading }) => {
                             swipeable={true}
                             draggable={true}
                             showDots={true}
-                            key={anime.mal_id + index}
+                            key={anime.mal_id + index * 3}
                             ssr={true} // means to render carousel on server-side.
                             infinite={true}
                             responsive={responsive}>
@@ -74,9 +75,20 @@ const AnimeList = ({ animes, loading }) => {
                 </Carousel>
             ) : (
                 <>
-                    <h3 className='mx-8 text-red-500 text-2xl sm:text-3xl font-bold mt-20 mb-8'>
-                        No anime found
-                    </h3>
+
+                    <div className='flex flex-col items-center justify-center'>
+                        <h3 className='mx-4 text-red-500 text-2xl sm:text-3xl font-bold mt-20 mb-8'>
+                            No anime found
+                        </h3>
+
+                        <Image
+                            className='object-cover rounded-md mt-4 w-[20%]'
+                            layout='intrinsic'
+                            src={noAnime}
+                        />
+
+                    </div>
+
                 </>
             )
 
