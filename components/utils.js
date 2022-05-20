@@ -13,7 +13,9 @@ const AnimePropItem = (props) => {
     return (
         <div className='mx-2'>
             {props.children ?
-                <AnimeProp children={props.children} text={`${props.label}: ${props.text}`} /> : <div className='my-2'>
+                <AnimeProp text={`${props.label}: ${props.text}`} >
+                    {props.children}
+                </AnimeProp> : <div className='my-2'>
                     <span className='text-white font-bold'>{capitalize(props.label)}</span>
                     <div className='italic text-sm text-white opacity-80'>{props.text}</div>
                 </div>}
