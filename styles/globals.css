@@ -5,7 +5,7 @@
 @layer base {
   body {
     font-family: Proxima Nova, system-ui, sans-serif;
-    @apply bg-[#06202A] text-gray-300;
+    @apply bg-[#0b1622] text-gray-300;
     /* @apply bg-[#02020a] text-gray-300; */
   }
 }

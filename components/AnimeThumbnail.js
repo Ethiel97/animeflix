@@ -1,29 +1,36 @@
 import Image from 'next/image'
+import { useRouter } from "next/router";
 import {
-    PlayIcon
+    PlayIcon, ThumbUpIcon
 } from '@heroicons/react/outline'
+import { AnimeProp } from './utils';
 
 const AnimeThumbnail = ({ anime }) => {
+
+    const router = useRouter();
+    const watchTrailer = () => {
+        console.log(anime.trailer.embed_url)
+        if (anime.trailer.embed_url)
+            window.open(anime.trailer.url, '_blank')
+    }
+
+
     return (
-
-        <div className='group transform transition duration-200 ease-in-out w-[332px] sm:hover:-translate-y-5'>
-            <div className=' cursor-pointer 
-             transform hover:z-50 relative' >
-
+        <div onClick={() => { router.push(`/animes/${anime.mal_id}`) }}
+            className='group transform transition duration-200 ease-in-out w-[302px] sm:hover:scale-95'>
+            <div className=' cursor-pointer transform hover:z-50 relative' >
                 {/* anime image */}
                 <Image
-                    className='object-cover rounded-md'
+                    className='object-fill rounded-md'
                     layout='responsive'
+                    quality={100}
                     src={anime.images.jpg.large_image_url}
-                alt={anime.title}
-
+                    alt={anime.title}
                     height={1020}
                     width={1080} />
 
                 {/* thumbnail mask */}
                 <div className='absolute w-full top-0 left-0 right-0 bottom-0 bg-black/40 rounded-md'>
-
-
                     <div className='flex justify-between mt-3 ml-3 mr-3'>
                         {/* anime year */}
                         <div className='text-black text-sm text-center
@@ -41,6 +48,15 @@ const AnimeThumbnail = ({ anime }) => {
                 sm:group-hover:text-red-500 text-xl font-bold'>
                     {anime.title}
                 </h3>
+
+                <div className='flex justify-start space-x-4 mt-2'>
+                    <AnimeProp text={anime.type.toUpperCase()} >
+                        <PlayIcon className='text-white w-5' />
+                    </AnimeProp>
+                    <AnimeProp text={anime.score} >
+                        <ThumbUpIcon className='text-white w-5' />
+                    </AnimeProp>
+                </div>
                 {/*  <p className='truncate max-w-md'> {result.overview}   </p>
 
                 <h2 className='mt-1 text-2-xl transition-all
@@ -58,9 +74,8 @@ const AnimeThumbnail = ({ anime }) => {
     )
 
 
-    function watchTrailer() {
 
-    }
+
 }
 
 export default AnimeThumbnail

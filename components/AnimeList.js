@@ -7,7 +7,7 @@ import noAnime from '../assets/images/no-data.svg'
 const responsive = [
     { breakpoint: 2000, cols: 6, rows: 3 },
     { breakpoint: 1200, cols: 5, rows: 2 },
-    { breakpoint: 990, cols: 3, rows: 2 },
+    { breakpoint: 990, cols: 4, rows: 2 },
     // { breakpoint: 464, cols: 1 },
 ];
 
@@ -20,8 +20,8 @@ const AnimeList = ({ animes, loading }) => {
                     <Carousel
                         className='overflow-visible'
                         cols={4}
-                        rows={1}
-                        gap={14}
+                        rows={5}
+                        gap={10}
                         loop
                         mobileBreakpoint={464}>
 
