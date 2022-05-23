@@ -8,18 +8,18 @@ export default function Layout({ children }) {
         //define useful head tags for SEO using Head component from next
         <>
             <NextSeo
-                title="Animeinfo"
+                title="Animeinfo - Anime Search Engine"
                 description="Browse, search thousands of anime for free. Get useful details about anime. Get anime recommendations. Get anime reviews. Get anime characters details."
                 canonical="https://animeinfo.vercel.app"
                 openGraph={{
                     url: 'https://animeinfo.vercel.app',
-                    title: 'Open Graph Title',
-                    description: 'Open Graph Description',
+                    title: 'Animeinfo - Anime Search Engine',
+                    description: 'Browse, search thousands of anime for free. Get useful details about anime. Get anime recommendations. Get anime reviews. Get anime characters details.',
                     images: [
                         {
-                            url: 'https://github.com/Ethiel97/animeinfo/blob/master/assets/images/app_screenshot.jpg',
-                            width: 1153,
-                            height: 1280,
+                            url: 'https://github.com/Ethiel97/animeflix/blob/master/assets/images/demo.png',
+                            width: 1920,
+                            height: 2420,
                             alt: 'Og Image Alt',
                             type: 'image/jpg',
                         },
@@ -34,20 +34,25 @@ export default function Layout({ children }) {
                 additionalLinkTags={[
                     {
                         rel: 'apple-touch-icon',
-                        href: '../public/apple-touch-icon.png',
+                        href: '/apple-touch-icon.png',
                         sizes: '128X128',
                         type: "image/png"
                     },
                     {
                         rel: 'icon',
-                        href: '../public/favicon-32X32.png',
+                        href: '/favicon.ico',
+                        type: "image/x-icon"
+                    },
+                    {
+                        rel: 'icon',
+                        href: '/favicon-32X32.png',
                         sizes: '32X32',
                         type: "image/png"
                     },
                     {
                         rel: 'icon',
-                        href: '../public/favicon-64X64.png',
-                        sizes: '64X64',
+                        href: '/favicon-16x16.png',
+                        sizes: '16X16',
                         type: "image/png"
                     },
                 ]}
