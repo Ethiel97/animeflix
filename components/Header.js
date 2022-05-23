@@ -29,7 +29,7 @@ export default function Header() {
     return (
         <div className='flex flex-col sm:flex-row m-8 justify-center 
          sm:justify-between items-center cursor-pointer h-auto'>
-            <div className='flex justify-between'>
+            <div className='flex justify-between items-center'>
                 <Logo />
 
                 <ul className='flex justify-between space-x-4 sm:ml-14'>

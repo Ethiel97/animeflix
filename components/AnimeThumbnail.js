@@ -14,8 +14,8 @@ const AnimeThumbnail = ({ anime }) => {
     }
 
     return (
-        <div onClick={() => { router.push(`/animes/${anime.mal_id}`) }}
-            className='group transform transition duration-200 ease-in-out w-[302px] sm:hover:scale-95'>
+        <div onClick={() => { router.replace(`/animes/${anime.mal_id}`) }}
+            className='group transform transition duration-200 ease-in-out w-[302px] sm:hover:scale-90'>
             <div className=' cursor-pointer transform hover:z-50 relative' >
                 {/* anime image */}
                 <Image

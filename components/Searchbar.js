@@ -43,7 +43,7 @@ const Searchbar = () => {
     }
 
     return (
-        <div className='rounded-md focus:ring flex items-center h-auto p-4 border-[2] w-1/3 bg-[#152232]/40' >
+        <div className='rounded-md focus:ring flex items-center h-auto p-4 border-[2] my-6 sm:my-0 w-full sm:w-1/3 bg-[#152232]/40' >
             <SearchIcon className='opacity-60 h-7 w-10' />
 
             <input

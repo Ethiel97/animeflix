@@ -11,7 +11,7 @@ const responsive = [
 const AnimeByGenresList = ({ data }) => {
     return (
         <div className='mx-2 mb-12'>
-            {data.map(({ animes, genre }) => (
+            {data.map(({ animes, genre }, index) => (
                 <>
                     {
                         animes.length > 0 && <h3 className='mx-8 text-red-500 text-2xl sm:text-3xl font-bold mt-20 mb-8'>
@@ -21,12 +21,13 @@ const AnimeByGenresList = ({ data }) => {
 
                     {animes.length > 0 &&
                         <Carousel
+                            key={index * 8}
                             className='overflow-visible'
                             cols={5}
                             rows={1}
                             gap={8}
                             loop
-                            mobileBreakpoint={464} >
+                            mobileBreakpoint={464}>
                             {animes.map((anime, index) => (
                                 <Carousel.Item
                                     key={anime.mal_id + index}
@@ -37,10 +38,13 @@ const AnimeByGenresList = ({ data }) => {
                                     ssr={true} // means to render carousel on server-side.
                                     infinite={true}
                                     responsive={responsive}>
-                                    <AnimeThumbnail key={anime.mal_id} anime={anime} />
+                                    <AnimeThumbnail
+                                        key={anime.mal_id}
+                                        anime={anime} />
                                 </Carousel.Item>
                             )
-                            )}
+                            )
+                            }
                         </Carousel>
                     }
                 </>

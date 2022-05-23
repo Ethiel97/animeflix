@@ -107,7 +107,7 @@ export async function getServerSideProps(context) {
     return {
         props: {
             anime: {
-                anime: animeRes.data,
+                anime: animeRes?.data ?? {},
                 characters: characters?.data?.length > 10 ? characters.data.slice(0, 10) : characters.data
             }
         }
