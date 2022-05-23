@@ -83,6 +83,8 @@ async function getAnimeReviews(animeId) {
   return res;
 }
 
+const fetcher = (...args) => fetch(...args).then(res => res.json());
+
 export {
   getAnimes,
   getRandomAnime,
@@ -95,6 +97,7 @@ export {
   searchCharacters,
   getTopAnimes,
   getAnimeRecommendations,
-  getAnimeReviews
+  getAnimeReviews,
+  fetcher,
 };
 

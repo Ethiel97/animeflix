@@ -4,7 +4,7 @@ import Carousel from 'react-grid-carousel'
 const responsive = [
     { breakpoint: 2000, cols: 6 },
     { breakpoint: 1200, cols: 5 },
-    { breakpoint: 990, cols: 4 },
+    { breakpoint: 990, cols: 5 },
     // { breakpoint: 464, cols: 1 },
 ];
 
@@ -27,9 +27,9 @@ const AnimeByGenresList = ({ data }) => {
                             gap={8}
                             loop
                             mobileBreakpoint={464} >
-                            {animes.map((anime,index) => (
+                            {animes.map((anime, index) => (
                                 <Carousel.Item
-                                    key={anime.mal_id+index}
+                                    key={anime.mal_id + index}
                                     className='rounded-md overflow-visible'
                                     swipeable={true}
                                     draggable={true}
@@ -44,7 +44,6 @@ const AnimeByGenresList = ({ data }) => {
                         </Carousel>
                     }
                 </>
-
             ))}
 
             {/*  <div className=''>

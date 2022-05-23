@@ -1,26 +1,27 @@
 import { useState, useEffect } from 'react'
 import AnimeList from '../components/AnimeList'
-import { searchAnimes } from '../network/requests'
+import { getAnimes, searchAnimes } from '../network/requests'
 import { useRouter } from 'next/router'
 
 const Search = () => {
-
-    let router = useRouter();
+    const router = useRouter();
     const [loading, setLoading] = useState(true);
     const [animes, setAnimes] = useState([]);
 
-    //search animes by query from the url in useEffect hook
     useEffect(() => {
-        const query = router.query.query;
-        if (query) {
-            searchAnimes(query).then(res => {
+        //define iife to avoid scope issues
+        (async () => {
+            try {
+                const res = await searchAnimes(router.query.query);
                 setAnimes(res.data);
+            } catch (e) {
+                console.log(e);
+            }
+            finally {
                 setLoading(false);
-            }).catch(error => {
-                setLoading(false)
-                setAnimes([])
-            })
-        }
+            }
+        })();
+
     }, [router.query.query])
 
 

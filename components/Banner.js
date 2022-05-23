@@ -54,7 +54,7 @@ const Banner = ({ anime }) => {
                     // blurDataURL='{bannerImage}'
                     alt={anime.title}
                     src={bannerImage}
-                    height={280}
+                    height={320}
                     width={1080} />
 
                 <div className='absolute top-0 left-0 right-0 bottom-0 bg-black/60'>
@@ -62,7 +62,7 @@ const Banner = ({ anime }) => {
                       sm:flex-row items-center space-x-4 sm:space-x-12 justify-center sm:justify-between h-[100%]'>
                         <div className='text-white sm:w-[45%] break-words text-bold text-2xl sm:text-3xl md:text-5xl uppercase'>{anime.title}</div>
                         <div onClick={watchTrailer} className='bg-red-500 p-4 text-white font-bold rounded-md cursor-pointer'>
-                            Watch now
+                            Watch trailer
                         </div>
                     </div>
                 </div>

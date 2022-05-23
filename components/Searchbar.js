@@ -38,7 +38,7 @@ const Searchbar = () => {
 
     const redirectToSearchPage = () => {
         if (query && query.length > 0) {
-            router.push(`/search?query=${query}`);
+            router.replace(`/search?query=${query}`);
         }
     }
 

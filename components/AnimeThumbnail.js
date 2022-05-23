@@ -6,14 +6,12 @@ import {
 import { AnimeProp } from './utils';
 
 const AnimeThumbnail = ({ anime }) => {
-
     const router = useRouter();
     const watchTrailer = () => {
         console.log(anime.trailer.embed_url)
         if (anime.trailer.embed_url)
             window.open(anime.trailer.url, '_blank')
     }
-
 
     return (
         <div onClick={() => { router.push(`/animes/${anime.mal_id}`) }}
@@ -72,10 +70,6 @@ const AnimeThumbnail = ({ anime }) => {
             </div>
         </div>
     )
-
-
-
-
 }
 
 export default AnimeThumbnail
