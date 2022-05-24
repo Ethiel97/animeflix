@@ -12,7 +12,7 @@ module.exports = {
         "3xl": "2000px",
       },
       fontFamily: {
-        'sans': ['Proxima Nova', ...defaultTheme.fontFamily.sans],
+        'sans': ["Sora", ...defaultTheme.fontFamily.sans],
       },
     },
   },

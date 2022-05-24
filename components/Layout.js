@@ -13,6 +13,7 @@ export default function Layout({ children }) {
                 canonical="https://animeinfo.vercel.app"
                 openGraph={{
                     url: 'https://animeinfo.vercel.app',
+                    type: 'website',
                     title: 'Animeinfo - Anime Search Engine',
                     description: 'Browse, search thousands of anime for free. Get useful details about anime. Get anime recommendations. Get anime reviews. Get anime characters details.',
                     images: [
@@ -32,6 +33,27 @@ export default function Layout({ children }) {
                     cardType: 'summary_large_image',
                 }}
                 additionalLinkTags={[
+                    /**
+                     * 
+                     * <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Flow+Circular&display=swap" rel="stylesheet"> 
+                     * 
+                     */
+                    {
+                        rel: 'preconnect',
+                        href: 'https://fonts.googleapis.com',
+                        crossOrigin: true,
+                    },
+                    {
+                        rel: 'preconnect',
+                        href: 'https://fonts.gstatic.com',
+                        crossOrigin: true,
+                    },
+                    {
+                        rel: 'stylesheet',
+                        href: 'https://fonts.googleapis.com/css2?family=Sora&display=swap',
+                    },
                     {
                         rel: 'apple-touch-icon',
                         href: '/apple-touch-icon.png',
