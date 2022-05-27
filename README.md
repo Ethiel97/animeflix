@@ -4,8 +4,7 @@ A anime discovery, made with NextJs and TailwindCSS. Please deploy your own vers
 
 Jikan Api for fetching data which is totally free.
 
-![Demo Image](https://github.com/Ethiel97/animeinfo/blob/master/assets/images/app_screenshot.jpg)
-
+![Demo Image](https://github.com/Ethiel97/animeflix/blob/master/assets/images/app_screenshot.jpg)
 
 ## Deploy on your computer
 

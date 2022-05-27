@@ -3,7 +3,6 @@ import { NextSeo } from 'next-seo'
 import Header from './Header'
 import Head from 'next/head'
 export default function Layout({ children }) {
-
     return (
         //define useful head tags for SEO using Head component from next
         <>
@@ -33,13 +32,6 @@ export default function Layout({ children }) {
                     cardType: 'summary_large_image',
                 }}
                 additionalLinkTags={[
-                    /**
-                     * 
-                     * <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Flow+Circular&display=swap" rel="stylesheet"> 
-                     * 
-                     */
                     {
                         rel: 'preconnect',
                         href: 'https://fonts.googleapis.com',

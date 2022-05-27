@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@heroicons/react": "^1.0.6",
+    "gogoanime-api": "github:riimuru/gogoanime",
+    "tailwind-scrollbar-hide": "^1.1.6",
     "next": "12.1.6",
     "next-seo": "^5.4.0",
     "nextjs-progressbar": "^0.0.14",
