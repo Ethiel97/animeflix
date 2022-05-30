@@ -1,6 +1,6 @@
 # Animeinfo
 
-A anime discovery, made with NextJs and TailwindCSS. Please deploy your own version of the site, by following the instructions. Please follow the instructions given below to deploy for yourself.
+An anime discovery, made with NextJs and TailwindCSS. Please deploy your own version of the site, by following the instructions. Please follow the instructions given below to deploy for yourself.
 
 Jikan Api for fetching data which is totally free.
 

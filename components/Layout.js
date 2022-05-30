@@ -1,7 +1,6 @@
 import NextNProgress from 'nextjs-progressbar'
 import { NextSeo } from 'next-seo'
 import Header from './Header'
-import Head from 'next/head'
 export default function Layout({ children }) {
     return (
         //define useful head tags for SEO using Head component from next
@@ -17,7 +16,7 @@ export default function Layout({ children }) {
                     description: 'Browse, search thousands of anime for free. Get useful details about anime. Get anime recommendations. Get anime reviews. Get anime characters details.',
                     images: [
                         {
-                            url: 'https://github.com/Ethiel97/animeflix/blob/master/assets/images/demo.png',
+                            url: 'https://github.com/Ethiel97/animeflix/blob/master/assets/images/app_screenshot.jpg',
                             width: 1920,
                             height: 2420,
                             alt: 'Og Image Alt',
